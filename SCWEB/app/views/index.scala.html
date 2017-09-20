@@ -1,0 +1,69 @@
+@(title: String)
+
+
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Shopping Cart</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css" integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY="
+    crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=BioRhyme|Montserrat" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<head>
+        <title>@title</title>
+        @* Global stylesheet from public directory *@
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")"/>
+        @* Stylesheet bundle containing component styles for Angular app *@
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("ui/styles.bundle.css")"/>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")"/>
+    </head>
+
+<body>
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li class="menu-text">
+          <h4>
+            <i class="material-icons">shop</i>
+            Pizza Store
+          </h4>
+        </li>
+      </ul>
+    </div>
+
+    <div class="top-bar-right">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li class="menu-text">
+          <h4>
+            <i class="material-icons">shop</i>
+            <p><a [routerLink]="['']">Logout</a></p>
+          </h4>
+        </li>
+      </ul>
+    </div>
+
+
+  </div>
+  <div class="row">
+    <div class="small-12 columns">
+      <app-root>loading....<app-root>
+    </div>
+  </div>
+
+ @* Built Angular bundles *@
+        <script src="@routes.Assets.versioned("ui/inline.bundle.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("ui/polyfills.bundle.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("ui/vendor.bundle.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("ui/main.bundle.js")" type="text/javascript"></script>
+</body>
+</html>
